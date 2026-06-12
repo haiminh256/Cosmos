@@ -4,22 +4,24 @@
 #include <vector>
 #include <Engine/Texture.h>
 
-class TileMap {
-public:
-    TileMap(int tileSize);
+namespace Cosmos {
+    class TileMap {
+    public:
+        TileMap(int tileSize);
 
-    void Load(const std::vector<std::vector<int>>& map);
-    void SetTexture(Texture* tex);
+        void Load(const std::vector<std::vector<int>>& map);
+        void SetTexture(Texture* tex);
 
-    void Render(SDL_Renderer* renderer);
+        void Render(SDL_Renderer* renderer);
 
-    bool IsSolid(int x, int y);
+        bool IsSolid(int x, int y);
 
-    int GetTileSize() const { return tileSize; }
+        int GetTileSize() const { return tileSize; }
 
-private:
-    std::vector<std::vector<int>> map;
-    Texture* texture;
+    private:
+        std::vector<std::vector<int>> map;
+        Texture* texture;
 
-    int tileSize;
-};
+        int tileSize;
+    };
+}

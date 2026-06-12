@@ -49,24 +49,24 @@ std::vector<std::vector<int>> level2 = {
 };
 
 int main(int argc, char* argv[]) {
-    Engine App;
+    Cosmos::Engine App;
     App.Init(SDL_INIT_VIDEO | SDL_INIT_VIDEO);
     App.CreateWindow("App", 896, 640);
     App.CreateRenderer();
     App.UseVsync();
     App.Log("main() EntryPoint successs", "INFO");
 
-    Audio audioManager;
+    Cosmos::Audio audioManager;
     audioManager.PlayBGM("../res/sfx/UsagiFlap.mp3");
 
     Player player(100.0f, 100.0f); 
-    Texture playerTexture;
+    Cosmos::Texture playerTexture;
     playerTexture.Load(App.GetRenderer(), "../res/hoshino.png");
     player.SetTexture(&playerTexture);
     player.SetAudio(&audioManager);
 
-    TileMap map(64);
-    Texture tileTexture;
+    Cosmos::TileMap map(64);
+    Cosmos::Texture tileTexture;
     tileTexture.Load(App.GetRenderer(), "../res/map.png");
     map.SetTexture(&tileTexture);
     

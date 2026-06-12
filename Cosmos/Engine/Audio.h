@@ -3,23 +3,24 @@
 #include <SDL3/SDL.h>
 #include <SDL3_mixer/SDL_mixer.h>
 #include <string>
-
-class Audio {
-public:
-    Audio();
-    ~Audio();
-
-
-    void PlaySFX(const std::string& filePath);
+namespace Cosmos {
+    class Audio {
+    public:
+        Audio();
+        ~Audio();
 
 
-    void PlayBGM(const std::string& filePath);
-    
+        void PlaySFX(const std::string& filePath);
 
-    void StopBGM();
 
-private:
-    MIX_Mixer* m_mixer;    
-    MIX_Track* m_bgmTrack;   
-    MIX_Audio* m_bgmAudio; 
-};
+        void PlayBGM(const std::string& filePath);
+        
+
+        void StopBGM();
+
+    private:
+        MIX_Mixer* m_mixer;    
+        MIX_Track* m_bgmTrack;   
+        MIX_Audio* m_bgmAudio; 
+    };
+}

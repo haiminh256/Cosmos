@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
-inline void Engine_Log(std::string content, std::string logLevel){
-    std::cout << "[" << logLevel << "]" << ":" << " " << content << std::endl;
+namespace Cosmos {
+    inline void Engine_Log(std::string content, std::string logLevel){
+        std::cout << "[" << logLevel << "]" << ":" << " " << content << std::endl;
+    }
 }
