@@ -1,0 +1,14 @@
+{
+    "C_Cpp.default.compilerPath": "C:/mingw64/bin/g++.exe",
+
+  // Ép hệ thống dùng bộ phân tích cú pháp chuẩn của Microsoft C++
+  "C_Cpp.intelliSenseEngine": "default",
+  
+  // Hiện danh sách gợi ý hàm ngay lập tức khi vừa gõ phím, độ trễ bằng 0
+  "editor.quickSuggestionsDelay": 0,
+  
+  // Luôn ưu tiên đưa các gợi ý chuẩn (hàm, biến, class) lên đầu danh sách
+  "editor.suggestSelection": "first"
+
+
+}
