@@ -7,7 +7,7 @@
             "command": "cmd",
             "args": [
                 "/c",
-                "if exist ${workspaceFolder}\\build rmdir /s /q ${workspaceFolder}\\build"
+                "if exist ${workspaceFolder}\\bin rmdir /s /q ${workspaceFolder}\\bin"
             ],
             "problemMatcher": [],
             "detail": "Xóa sạch thư mục build cũ để dọn dẹp bộ nhớ đệm."
@@ -20,7 +20,7 @@
                 "-G", "MinGW Makefiles",
                 "-DCMAKE_CXX_COMPILER=C:/mingw64/bin/g++.exe",
                 "-DCMAKE_MAKE_PROGRAM=C:/mingw64/bin/mingw32-make.exe",
-                "-B", "${workspaceFolder}/bin",
+                "-B", "${workspaceFolder}\\bin",
                 "-S", "${workspaceFolder}"
             ],
             "problemMatcher": [
@@ -37,7 +37,7 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "${workspaceFolder}/bin"
+                "${workspaceFolder}\\bin"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

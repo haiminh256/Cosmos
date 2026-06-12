@@ -17,10 +17,29 @@ include_directories(
 set(VENDORS_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/vendors/lib")
 
 # Tìm các thư viện bên thứ ba (SDL3, spdlog...)
-find_library(SDL3_LIB NAMES SDL3.dll SDL3 PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
-find_library(SDL3_IMAGE_LIB NAMES SDL3_image.dll SDL3_image PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
-find_library(SDL3_MIXER_LIB NAMES SDL3_mixer.dll SDL3_mixer PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
-find_library(SPDLOG_LIB NAMES spdlog PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
+find_library(SDL3_LIB
+    NAMES SDL3
+    PATHS ${VENDORS_LIB_DIR}
+    NO_DEFAULT_PATH
+)
+
+find_library(SDL3_IMAGE_LIB
+    NAMES SDL3_image
+    PATHS ${VENDORS_LIB_DIR}
+    NO_DEFAULT_PATH
+)
+
+find_library(SDL3_MIXER_LIB
+    NAMES SDL3_mixer
+    PATHS ${VENDORS_LIB_DIR}
+    NO_DEFAULT_PATH
+)
+
+find_library(SPDLOG_LIB
+    NAMES spdlog
+    PATHS ${VENDORS_LIB_DIR}
+    NO_DEFAULT_PATH
+)
 
 # =================================================================
 # GỌI FILE CMAKELISTS.TXT TRONG THƯ MỤC COSMOS
