@@ -62,7 +62,7 @@ void Player::HandleInput(float dt)
         velocityY = jumpForce;
         isGrounded = false;
         if (audioManager != nullptr) {
-            audioManager->PlaySFX("../res/sfx/jump.mp3");
+            audioManager->PlaySFX("res/sfx/jump.mp3");
         }
     }
 }

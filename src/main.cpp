@@ -57,17 +57,17 @@ int main(int argc, char* argv[]) {
     App.Log("main() EntryPoint successs", "INFO");
 
     Cosmos::Audio audioManager;
-    audioManager.PlayBGM("../res/sfx/UsagiFlap.mp3");
+    audioManager.PlayBGM("res/sfx/UsagiFlap.mp3");
 
     Player player(100.0f, 100.0f); 
     Cosmos::Texture playerTexture;
-    playerTexture.Load(App.GetRenderer(), "../res/hoshino.png");
+    playerTexture.Load(App.GetRenderer(), "res/hoshino.png");
     player.SetTexture(&playerTexture);
     player.SetAudio(&audioManager);
 
     Cosmos::TileMap map(64);
     Cosmos::Texture tileTexture;
-    tileTexture.Load(App.GetRenderer(), "../res/map.png");
+    tileTexture.Load(App.GetRenderer(), "res/map.png");
     map.SetTexture(&tileTexture);
     
     player.SetTileMap(&map);
