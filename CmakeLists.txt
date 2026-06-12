@@ -1,0 +1,43 @@
+cmake_minimum_required(VERSION 3.16)
+project(EngineProject CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Thêm Macro định nghĩa cho spdlog tĩnh
+add_compile_definitions(SPDLOG_COMPILED_LIB)
+
+# Cấu hình đường dẫn Include tổng thể cho toàn dự án
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/Cosmos
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/vendors/include
+)
+
+set(VENDORS_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/vendors/lib")
+
+# Tìm các thư viện bên thứ ba (SDL3, spdlog...)
+find_library(SDL3_LIB NAMES SDL3.dll SDL3 PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
+find_library(SDL3_IMAGE_LIB NAMES SDL3_image.dll SDL3_image PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
+find_library(SDL3_MIXER_LIB NAMES SDL3_mixer.dll SDL3_mixer PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
+find_library(SPDLOG_LIB NAMES spdlog PATHS ${VENDORS_LIB_DIR} NO_DEFAULT_PATH)
+
+# =================================================================
+# GỌI FILE CMAKELISTS.TXT TRONG THƯ MỤC COSMOS
+# =================================================================
+# Lệnh này sẽ bắt CMake nhảy vào Cosmos/ để build ra file libCosmos.a trước
+add_subdirectory(Cosmos)
+
+# Quét tất cả file .cpp nằm trong thư mục src (chứa Player, main...)
+file(GLOB_RECURSE SRC_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
+
+# Tạo file thực thi main.exe từ src
+add_executable(main ${SRC_SOURCES})
+
+# Cấu hình đẩy file main.exe vào thư mục bin của dự án
+set_target_properties(main PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin"
+)
+
+# Liên kết file main.exe với thư viện Cosmos vừa được tạo ra từ subdirectory
+target_link_libraries(main Cosmos)

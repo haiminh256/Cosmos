@@ -1,6 +1,4 @@
 #pragma once
-#define SPDLOG_COMPILED_LIB 
-
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <SDL3/SDL.h>
