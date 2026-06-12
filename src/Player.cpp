@@ -56,7 +56,7 @@ void Player::HandleInput(float dt)
 
     if (keys[SDL_SCANCODE_A]) velocityX = -speed;
     if (keys[SDL_SCANCODE_D]) velocityX = speed;
-
+    if (keys[SDL_SCANCODE_M]) audioManager->StopBGM();
     if (keys[SDL_SCANCODE_SPACE] && isGrounded)
     {
         velocityY = jumpForce;

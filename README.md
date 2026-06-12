@@ -18,3 +18,4 @@ A lightweight 2D game engine written in C++ and SDL3.
 - SDL3
 - SDL3_image
 - SDL3_mixer
+- spdlo

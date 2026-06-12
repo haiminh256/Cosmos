@@ -1,4 +1,5 @@
 #include <Engine/Texture.h>
+#include <Engine/Log.h>
 #include <EngineEnv.h>
 
 
@@ -22,10 +23,10 @@ namespace Cosmos {
         texture = IMG_LoadTexture(renderer,
                                 path.c_str());
         if(texture != nullptr){
-            Engine_Log("Texture::Load success: " + path, "INFO");
+            CORE_INFO("Texture::Load success: " + path);
             return texture;
         }
-        Engine_Log("Texture::Load failed: " + path + (std::string)SDL_GetError(), "ERROR");
+        CORE_ERROR("Texture::Load failed: " + path + (std::string)SDL_GetError());
         return texture;
     }
 

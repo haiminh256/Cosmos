@@ -51,7 +51,7 @@ std::vector<std::vector<int>> level2 = {
 int main(int argc, char* argv[]) {
     Cosmos::Engine App;
     App.Init(SDL_INIT_VIDEO | SDL_INIT_VIDEO);
-    App.CreateWindow("App", 896, 640);
+    App.CreateAppWindow("App", 896, 640);
     App.CreateRenderer();
     App.UseVsync();
     App.Log("main() EntryPoint successs", "INFO");

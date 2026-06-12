@@ -1,3 +1,4 @@
+#include <Engine/Log.h>
 #include <Engine.h>
 
 namespace Cosmos {
@@ -10,26 +11,27 @@ namespace Cosmos {
     }
     void Engine::Init(SDL_InitFlags flags){
         if(!SDL_Init(flags)){
-            Engine_Log("Engine::Init() failed", "ERROR");
+            CORE_ERROR("Engine::Init() failed");
         }
         if(!MIX_Init()){
-            Engine_Log("Engine::Init() failed", "ERROR");
+            CORE_ERROR("Engine::Init() failed");
         }
-        Engine_Log("Engine::Init() success", "INFO");
+        Logger::Init();
+        CORE_INFO("Engine::Init() success");
     }
-    void Engine::CreateWindow(const char* title, int width, int height){
+    void Engine::CreateAppWindow(const char* title, int width, int height){
         window = SDL_CreateWindow(title, width, height, SDL_WINDOW_RESIZABLE);
         if(!window){
-            Engine_Log("Engine::CreateWindow() failed", "ERROR");
+            CORE_ERROR("Engine::CreateWindow() failed");
         }
-        Engine_Log("Engine::CreateWindow() success", "INFO");
+        CORE_INFO("Engine::CreateWindow() success");
     }
     void Engine::CreateRenderer(){
         renderer = SDL_CreateRenderer(window, nullptr);
         if(!renderer){
-            Engine_Log("Engine::CreateRenderer() failed", "ERROR");
+            CORE_ERROR("Engine::CreateRenderer() failed");
         }
-        Engine_Log("Engine::CreateRenderer() success", "INFO");
+        CORE_INFO("Engine::CreateRenderer() success");
     }
     void Engine::ShowFPS()
     {
@@ -37,15 +39,15 @@ namespace Cosmos {
 
         Uint64 currentTime = SDL_GetTicks();
 
-        if(currentTime - lastFPSTime >= 5000)
+        if(currentTime - lastFPSTime >= 10000)
         {
             float fps =
                 frameCount * 1000.0f /
                 (currentTime - lastFPSTime);
 
-            Engine_Log(
-                "Engine::ShowFPS() FPS: " + std::to_string((int)fps),
-                "INFO"
+            CORE_INFO(
+                "Engine::ShowFPS() FPS: {}",
+                (int)fps
             );
 
             frameCount = 0;
@@ -54,7 +56,7 @@ namespace Cosmos {
     }
     void Engine::UseVsync(){
         SDL_SetRenderVSync(renderer, 1);
-        Engine_Log("Engine::UseVSync success", "INFO");
+        CORE_INFO("Engine::UseVSync success");
     }   
     bool Engine::IsRunning() const {
         return isRunning;
@@ -78,11 +80,11 @@ namespace Cosmos {
         }
     }
     void Engine::Log(std::string content, std::string logLevel){
-        std::cout << "[" << logLevel << "]" << ":" << " " << content << std::endl;
+        CORE_INFO(content);
     }
     void Engine::Quit(){
         SDL_Quit();
-        Engine_Log("Engine::Quit() success", "INFO");
+        CORE_INFO("Engine::Quit() success");
     }
     SDL_Renderer* Engine::GetRenderer(){
         return renderer;

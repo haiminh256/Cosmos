@@ -1,12 +1,13 @@
 #pragma once
 #include <EngineEnv.h>
 
+extern "C"
 namespace Cosmos {
     class Engine{
     public:
         Engine();
         void Init(SDL_InitFlags flags);
-        void CreateWindow(const char* title, int width, int height);
+        void CreateAppWindow(const char* title, int width, int height);
         void CreateRenderer();
         void EventHandle();
         bool IsRunning() const;

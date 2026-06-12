@@ -5,8 +5,6 @@
             "label": "C/C++: g++.exe build active file",
             "command": "C:\\mingw64\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
                 "${workspaceFolder}\\src\\*.cpp",
                 "${workspaceFolder}\\Cosmos\\*.cpp",
                 "-I${workspaceFolder}\\Cosmos",
@@ -17,7 +15,8 @@
                 "${workspaceFolder}\\bin\\main.exe",
                 "-lSDL3",
                 "-lSDL3_image",
-                "-lSDL3_mixer"
+                "-lSDL3_mixer",
+                "-lspdlog",
             ],
             "options": {
                 "cwd": "${fileDirname}"

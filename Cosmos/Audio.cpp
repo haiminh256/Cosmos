@@ -1,4 +1,5 @@
 #include <Engine/Audio.h>
+#include <Engine/Log.h>
 #include <EngineEnv.h>
 #include <iostream>
 
@@ -9,10 +10,8 @@ namespace Cosmos {
         MIX_Audio* sfxAudio = MIX_LoadAudio(m_mixer, filePath.c_str(), false);
         
         if (!sfxAudio) {
-            Engine_Log("Audio::PlaySFX PlaySFX failed: " + filePath + " " + SDL_GetError(), "ERROR");
+            CORE_ERROR("Audio::PlaySFX PlaySFX failed: " + filePath + " " + SDL_GetError());
         }
-        Engine_Log("Audio::PlaySFX success: " + filePath, "INFO");
-
 
         MIX_PlayAudio(m_mixer, sfxAudio);
         MIX_DestroyAudio(sfxAudio);
@@ -25,10 +24,9 @@ namespace Cosmos {
 
         m_bgmAudio = MIX_LoadAudio(m_mixer, filePath.c_str(), false);
         if (!m_bgmAudio) {
-            Engine_Log("Audio::PlayBGM failed: " + filePath + SDL_GetError(), "ERROR");
+            CORE_ERROR("Audio::PlayBGM failed: " + filePath + SDL_GetError());
             return;
         }
-        Engine_Log("Audio::PlayBGM success: " + filePath, "INFO");
 
         m_bgmTrack = MIX_CreateTrack(m_mixer);
         if (m_bgmTrack) {
@@ -60,12 +58,12 @@ namespace Cosmos {
     }
     Audio::Audio() : m_mixer(nullptr), m_bgmTrack(nullptr), m_bgmAudio(nullptr) {
         if (!MIX_Init()) {
-            Engine_Log("Audio::Audio constructor failed", "ERROR");
+            CORE_ERROR("Audio::Audio constructor failed");
         }
 
         m_mixer = MIX_CreateMixerDevice(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, nullptr);
         if (!m_mixer) {
-            Engine_Log("Audio::Audio MIX_CreateMixerDevice failed", "ERROR");
+            CORE_ERROR("Audio::Audio MIX_CreateMixerDevice failed");
         }
     }
 
