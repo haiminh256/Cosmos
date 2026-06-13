@@ -7,8 +7,16 @@
 #include <iostream>
 #include <string>
 
-#ifdef COSMOS_BUILD_DLL
-    #define COSMOS_API __declspec(dllexport)
+#ifdef COSMOS_PLATFORM_WINDOWS
+    #ifdef COSMOS_BUILD_DLL
+        #define COSMOS_API __declspec(dllexport)
+    #else
+        #define COSMOS_API __declspec(dllimport)
+    #endif
 #else
-    #define COSMOS_API __declspec(dllimport)
+    #if __GNUC__ >= 4
+        #define COSMOS_API __attribute__ ((visibility ("default")))
+    #else
+        #define COSMOS_API
+    #endif
 #endif

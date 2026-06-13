@@ -1,8 +1,9 @@
 {
-    "C_Cpp.default.compilerPath": "C:/mingw64/bin/g++.exe",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
 
   // Ép hệ thống dùng bộ phân tích cú pháp chuẩn của Microsoft C++
   "C_Cpp.intelliSenseEngine": "default",
+
   
   // Hiện danh sách gợi ý hàm ngay lập tức khi vừa gõ phím, độ trễ bằng 0
   "editor.quickSuggestionsDelay": 0,
