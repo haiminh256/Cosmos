@@ -2,9 +2,10 @@
 
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
+#include <EngineEnv.h>
 #include <string>
 namespace Cosmos {
-    class Texture {
+    class COSMOS_API Texture {
     public:
         Texture();
         ~Texture();

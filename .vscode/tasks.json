@@ -26,9 +26,6 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "dependsOn": [
-                "CMake: 1. Clean Cache (Chỉ chạy khi lỗi hoặc đổi cấu trúc)"
-            ],
             "detail": "Quét cấu hình 2 file CMakeLists.txt và ép sử dụng bộ dịch MinGW GCC."
         },
         {
@@ -54,7 +51,7 @@
             "args": [
                 "/c",
                 // Chạy trực tiếp file exe cứng từ thư mục bin sau khi luồng build của task 3 đã kết thúc hoàn toàn
-                "${workspaceFolder}\\bin\\main.exe"
+                "${workspaceFolder}\\bin\\Game.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

@@ -47,7 +47,19 @@ std::vector<std::vector<int>> level2 = {
     {3,3,3,3,3,3,3,3,3,3,3,3,2,2}, 
     {1,1,1,1,1,1,1,1,1,1,1,1,1,1} 
 };
-
+std::vector<std::vector<int>> level3 = {
+    {3,3,3,3,3,3,3,3,3,3,3,3,2,3}, 
+    {3,3,3,3,3,3,3,3,3,3,2,3,3,3},
+    {3,3,3,3,3,3,3,3,3,2,2,2,2,2},
+    {3,3,3,3,3,3,3,2,3,3,3,3,3,3},
+    {3,3,3,3,3,3,2,2,2,3,3,3,3,3},
+    {3,3,3,3,3,2,2,2,2,2,3,3,3,3},
+    {2,2,3,3,3,3,3,3,3,3,3,3,2,2},
+    {3,3,3,2,2,3,3,3,3,2,2,3,3,3},
+    {3,3,3,3,3,3,2,2,3,3,3,3,3,3},
+    {1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+};
+ 
 int main(int argc, char* argv[]) {
     Cosmos::Engine App;
     App.Init(SDL_INIT_VIDEO | SDL_INIT_VIDEO);
@@ -59,7 +71,7 @@ int main(int argc, char* argv[]) {
     Cosmos::Audio audioManager;
     audioManager.PlayBGM("res/sfx/UsagiFlap.mp3");
 
-    Player player(100.0f, 100.0f); 
+    Player player(50.0f, 50.0f); 
     Cosmos::Texture playerTexture;
     playerTexture.Load(App.GetRenderer(), "res/hoshino.png");
     player.SetTexture(&playerTexture);
@@ -91,6 +103,9 @@ int main(int argc, char* argv[]) {
             } 
             else if (levelIndex == 2) {
                 map.Load(level2); 
+            }
+            else if (levelIndex == 3){
+                map.Load(level3);
             }
             else {
                 levelIndex = 0;

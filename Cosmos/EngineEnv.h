@@ -6,3 +6,9 @@
 #include <SDL3_mixer/SDL_mixer.h>
 #include <iostream>
 #include <string>
+
+#ifdef COSMOS_BUILD_DLL
+    #define COSMOS_API __declspec(dllexport)
+#else
+    #define COSMOS_API __declspec(dllimport)
+#endif

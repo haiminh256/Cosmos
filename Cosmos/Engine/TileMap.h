@@ -5,7 +5,7 @@
 #include <Engine/Texture.h>
 
 namespace Cosmos {
-    class TileMap {
+    class COSMOS_API TileMap {
     public:
         TileMap(int tileSize);
 

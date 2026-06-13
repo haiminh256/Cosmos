@@ -3,8 +3,9 @@
 #include <SDL3/SDL.h>
 #include <SDL3_mixer/SDL_mixer.h>
 #include <string>
+#include <EngineEnv.h>
 namespace Cosmos {
-    class Audio {
+    class COSMOS_API Audio {
     public:
         Audio();
         ~Audio();

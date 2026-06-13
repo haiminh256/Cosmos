@@ -5,7 +5,7 @@
 #include <Engine/TileMap.h>
 
 namespace Cosmos {
-    class Entity {
+    class COSMOS_API Entity {
     public:
         virtual ~Entity() = default;
 

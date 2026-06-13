@@ -1,21 +1,26 @@
-cmake_minimum_required(VERSION 3.16)
-project(CosmosEngine CXX)
-
-# Quét tất cả file .cpp nằm trực tiếp trong thư mục Cosmos
-file(GLOB COSMOS_SOURCES "*.cpp")
-
-# Đóng gói thành thư viện tĩnh libCosmos.a
-add_library(Cosmos STATIC ${COSMOS_SOURCES})
-
-# Cấu hình vị trí xuất file libCosmos.a ra thư mục vendors/lib chung của dự án
-set_target_properties(Cosmos PROPERTIES
-    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/vendors/lib"
+file(GLOB_RECURSE COSMOS_SOURCES
+    "*.cpp"
 )
 
-# Nếu code của Cosmos gọi trực tiếp các hàm của SDL3 hoặc spdlog thì liên kết tại đây
-target_link_libraries(Cosmos
-    ${SDL3_LIB}
-    ${SDL3_IMAGE_LIB}
-    ${SDL3_MIXER_LIB}
-    ${SPDLOG_LIB}
+add_library(Cosmos SHARED
+    ${COSMOS_SOURCES}
+)
+
+target_compile_definitions(Cosmos PRIVATE
+    COSMOS_BUILD_DLL
+)
+
+target_include_directories(Cosmos PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${PROJECT_SOURCE_DIR}/vendors/SDL/include
+    ${PROJECT_SOURCE_DIR}/vendors/SDL_image/include 
+    ${PROJECT_SOURCE_DIR}/vendors/SDL_mixer/include
+    ${PROJECT_SOURCE_DIR}/vendors/spdlog/include
+)
+
+target_link_libraries(Cosmos PUBLIC
+    SDL3::SDL3
+    SDL3_image::SDL3_image
+    SDL3_mixer::SDL3_mixer
+    spdlog::spdlog
 )

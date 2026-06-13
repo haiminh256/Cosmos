@@ -1,0 +1,20 @@
+vendors/SDL/CMakeFiles/SDL3-shared.dir/src/render/gpu/SDL_shaders_gpu.c.obj: \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\SDL_shaders_gpu.c \
+ C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/SDL_internal.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\SDL_shaders_gpu.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/spir-v.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/color.frag.spv.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/linepoint.vert.spv.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/texture_advanced.frag.spv.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/texture_rgb.frag.spv.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/texture_rgba.frag.spv.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/tri_color.vert.spv.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/tri_texture.vert.spv.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/dxil.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/color.frag.dxil.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/linepoint.vert.dxil.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/texture_advanced.frag.dxil.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/texture_rgb.frag.dxil.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/texture_rgba.frag.dxil.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/tri_color.vert.dxil.h \
+ C:\Users\Admin\Documents\Cosmos\vendors\SDL\src\render\gpu\shaders/tri_texture.vert.dxil.h

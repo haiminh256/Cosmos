@@ -4,10 +4,11 @@
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
+#include <EngineEnv.h>
 
 namespace Cosmos
 {
-    class Logger
+    class COSMOS_API Logger
     {
     public:
         static void Init();

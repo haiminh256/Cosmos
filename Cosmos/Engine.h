@@ -3,7 +3,7 @@
 
 extern "C"
 namespace Cosmos {
-    class Engine{
+    class COSMOS_API Engine{
     public:
         Engine();
         void Init(SDL_InitFlags flags);
