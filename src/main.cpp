@@ -4,7 +4,6 @@
 #include <Engine/Audio.h>
 #include "Player.h"
 
-
 std::random_device rd;
 std::mt19937 gen(rd());
 std::uniform_int_distribution<> distr(0,2);
@@ -89,7 +88,6 @@ int main(int argc, char* argv[]) {
     while(App.IsRunning()){
         App.EventHandle();
         App.UpdateDeltaTime();
-
         
         player.Update(App.GetDeltaTime());
         App.ShowFPS();
