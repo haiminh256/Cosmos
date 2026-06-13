@@ -1,3 +1,1 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\spdlog.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\spdlog.dir/objects.a @CMakeFiles\spdlog.dir\objects1.rsp
-C:\mingw64\bin\g++.exe -shared -o libspdlog.dll -Wl,--out-implib,libspdlog.dll.a -Wl,--major-image-version,1,--minor-image-version,17 -Wl,--whole-archive CMakeFiles\spdlog.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\spdlog.dir\linkLibs.rsp
+/usr/bin/c++ -fPIC -shared -Wl,--dependency-file=CMakeFiles/spdlog.dir/link.d -Wl,-soname,libspdlog.so.1.17 -o libspdlog.so.1.17.0 CMakeFiles/spdlog.dir/src/spdlog.cpp.o CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o CMakeFiles/spdlog.dir/src/color_sinks.cpp.o CMakeFiles/spdlog.dir/src/file_sinks.cpp.o CMakeFiles/spdlog.dir/src/async.cpp.o CMakeFiles/spdlog.dir/src/cfg.cpp.o CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o

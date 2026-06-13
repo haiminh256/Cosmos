@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.3")
    message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...4.1)
+cmake_policy(VERSION 2.8.3...4.0)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -52,7 +52,7 @@ add_library(SDL3::SDL3-shared SHARED IMPORTED)
 set_target_properties(SDL3::SDL3-shared PROPERTIES
   COMPATIBLE_INTERFACE_BOOL "SDL3_SHARED"
   COMPATIBLE_INTERFACE_STRING "SDL_VERSION"
-  INTERFACE_LINK_DEPENDS "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/dynapi/SDL_dynapi.sym"
+  INTERFACE_LINK_DEPENDS "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/dynapi/SDL_dynapi.sym"
   INTERFACE_LINK_LIBRARIES "SDL3::Headers"
   INTERFACE_SDL3_SHARED "TRUE"
   INTERFACE_SDL_VERSION "SDL3"
@@ -62,8 +62,8 @@ set_target_properties(SDL3::SDL3-shared PROPERTIES
 # Import target "SDL3::SDL3-shared" for configuration ""
 set_property(TARGET SDL3::SDL3-shared APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(SDL3::SDL3-shared PROPERTIES
-  IMPORTED_IMPLIB_NOCONFIG "C:/Users/Admin/Documents/Cosmos/bin/vendors/SDL/libSDL3.dll.a"
-  IMPORTED_LOCATION_NOCONFIG "C:/Users/Admin/Documents/Cosmos/bin/vendors/SDL/SDL3.dll"
+  IMPORTED_LOCATION_NOCONFIG "/home/haiminh256/Documents/Cosmos/bin/vendors/SDL/libSDL3.so.0.5.0"
+  IMPORTED_SONAME_NOCONFIG "libSDL3.so.0"
   )
 
 # Make sure the targets which have been exported in some other
