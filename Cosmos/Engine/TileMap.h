@@ -2,6 +2,7 @@
 
 #include <SDL3/SDL.h>
 #include <vector>
+#include <string>
 #include <Engine/Texture.h>
 
 namespace Cosmos {
@@ -10,6 +11,7 @@ namespace Cosmos {
         TileMap(int tileSize);
 
         void Load(const std::vector<std::vector<int>>& map);
+        bool LoadFromCSV(const std::string& path);
         void SetTexture(Texture* tex);
 
         void Render(SDL_Renderer* renderer);
