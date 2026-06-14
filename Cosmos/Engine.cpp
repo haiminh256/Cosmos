@@ -20,7 +20,7 @@ namespace Cosmos {
         CORE_INFO("Engine::Init() success");
     }
     void Engine::CreateAppWindow(const char* title, int width, int height){
-        window = SDL_CreateWindow(title, width, height, SDL_WINDOW_BORDERLESS);
+        window = SDL_CreateWindow(title, width, height, SDL_WINDOW_RESIZABLE);
         if(!window){
             CORE_ERROR("Engine::CreateWindow() failed");
         }

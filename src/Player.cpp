@@ -3,13 +3,13 @@
 
 Player::Player(float x, float y)
     : speed(300.0f),
-      gravity(700.0f),
-      jumpForce(-300.0f),
+      gravity(1000.0f),
+      jumpForce(-498.0f),
       reachedNextLevel(false),
       currentMap(nullptr)
       
 {
-    rect = {x, y, 32.0f, 32.0f};
+    rect = {x, y, 64.0f, 64.0f};
     velocityX = 0.0f;
     velocityY = 0.0f;
     isGrounded = false;
@@ -29,8 +29,8 @@ void Player::Update(float dt)
     if (currentMap != nullptr) {
         CheckMapCollisionY(*currentMap);
     }
-    if (rect.y > 576.0f) {
-        rect.y = 576.0f;
+    if (rect.y > 512.0f) {
+        rect.y = 512.0f;
         velocityY = 0.0f;
         isGrounded = true;
     }
