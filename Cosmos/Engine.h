@@ -1,7 +1,6 @@
 #pragma once
 #include <EngineEnv.h>
 
-extern "C"
 namespace Cosmos {
     class COSMOS_API Engine{
     public:
