@@ -8,16 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_assert.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_assert.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_assert.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_common.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_common.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_common.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_compare.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_compare.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_compare.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_crc32.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_crc32.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_crc32.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_font.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_font.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_font.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_fuzzer.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_fuzzer.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_fuzzer.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_harness.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_harness.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_harness.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_log.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_log.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_log.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_md5.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_md5.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_md5.c.obj.d"
-  "C:/Users/Admin/Documents/Cosmos/vendors/SDL/src/test/SDL_test_memory.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_memory.c.obj" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_memory.c.obj.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_assert.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_assert.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_assert.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_common.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_common.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_common.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_compare.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_compare.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_compare.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_crc32.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_crc32.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_crc32.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_font.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_font.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_font.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_fuzzer.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_fuzzer.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_fuzzer.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_harness.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_harness.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_harness.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_log.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_log.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_log.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_md5.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_md5.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_md5.c.o.d"
+  "/home/haiminh256/Documents/Cosmos/vendors/SDL/src/test/SDL_test_memory.c" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_memory.c.o" "gcc" "vendors/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_memory.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

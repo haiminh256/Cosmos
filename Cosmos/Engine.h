@@ -16,7 +16,7 @@ namespace Cosmos {
         float GetDeltaTime() const;
         void Clear();
         void Present();
-        void Log(std::string content, std::string logLevel);
+        void Log(std::string content);
         void UpdateDeltaTime();
         SDL_Renderer* GetRenderer();
     private:
